@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            // # Reset/normalize 
+            /* http://meyerweb.com/eric/tools/css/reset/ 
+			   v2.0 | 20110126
+			   License: none (public domain)
+			*/
+            
+            html,
+            body,
+            div,
+            span,
+            applet,
+            object,
+            iframe,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            blockquote,
+            pre,
+            a,
+            abbr,
+            acronym,
+            address,
+            big,
+            cite,
+            code,
+            del,
+            dfn,
+            em,
+            img,
+            ins,
+            kbd,
+            q,
+            s,
+            samp,
+            small,
+            strike,
+            strong,
+            sub,
+            sup,
+            tt,
+            var,
+            b,
+            u,
+            i,
+            center,
+            dl,
+            dt,
+            dd,
+            ol,
+            ul,
+            li,
+            fieldset,
+            form,
+            label,
+            legend,
+            table,
+            caption,
+            tbody,
+            tfoot,
+            thead,
+            tr,
+            th,
+            td,
+            article,
+            aside,
+            canvas,
+            details,
+            embed,
+            figure,
+            figcaption,
+            footer,
+            header,
+            hgroup,
+            menu,
+            nav,
+            output,
+            ruby,
+            section,
+            summary,
+            time,
+            mark,
+            audio,
+            video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+            /* HTML5 display-role reset for older browsers */
+            
+            article,
+            aside,
+            details,
+            figcaption,
+            figure,
+            footer,
+            header,
+            hgroup,
+            menu,
+            nav,
+            section {
+                display: block;
+            }
+            
+            body {
+                line-height: 1;
+            }
+            
+            ol,
+            ul {
+                list-style: none;
+            }
+            
+            blockquote,
+            q {
+                quotes: none;
+            }
+            
+            blockquote:before,
+            blockquote:after,
+            q:before,
+            q:after {
+                content: '';
+                content: none;
+            }
+            
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            
+            *,
+            *:before,
+            *:after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            
+            html {
+                font-size: 62.5%;
+            }
+            
+            body {
+                font-size: 16px;
+                font-family: tahoma, arial;
+                line-height: 1.5;
+                color: #89949B;
+                background-color: #273135;
+                position: relative;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+            
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            .wrapper {
+                width: 600px;
+                margin: 0 auto;
+                background-color: #171D1F;
+                border-radius: 10px;
+                margin-top: 40px;
+                padding: 40px;
+            }
+            
+            @media only screen and (max-width: 599px) {
+                .wrapper {
+                    width: 100%;
+                }
+            }
+            
+            a {
+                color: #DE5939;
+                text-decoration: none;
+            }
+            
+            ul {}
+            
+            .wrapper> ul> li {
+                border-bottom: 1px solid #273135;
+                position: relative;
+                padding: 8px 15px 8px 0;
+            }
+            
+            ul li> ul li {
+                position: relative;
+                padding: 4px 15px 4px 60px;
+                margin-left: -15px;
+                border-radius: 2px;
+            }
+            
+            ul li> ul li:hover {
+                background-color: #1a2123
+            }
+            
+            ul li> ul {
+                margin-left: 15px;
+            }
+            
+            ul li> ul li> a {
+                display: block;
+            }
+            
+            ul li> ul li:before {
+                content: '';
+                display: inline-block;
+                width: 40px;
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                border-bottom: 1px dotted #273135;
+            }
+            
+            ul li> ul li> .status {
+                position: absolute;
+                left: 3px;
+                top: 12px;
+            }
+            
+            .status {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #222;
+                display: inline-block;
+            }
+            
+            .status--complete {
+                background-color: #5cb85c;
+            }
+            
+            .status--processing {
+                background-color: #f0ad4e;
+            }
+            
+            .desc {
+                border-bottom: 1px solid #273135;
+                margin-bottom: 15px;
+            }
+            
+            .desc__text {
+                text-transform: uppercase;
+                font-size: 11px;
+            }
+            
+            .percent {
+                text-transform: uppercase;
+                font-size: 11px;
+                color: #555;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="desc">
+                <span class="status status--complete"></span>
+                <span class="desc__text">Complete</span>
+                <span class="status status--processing"></span>
+                <span class="desc__text">In progress</span>
+            </div>
+            <ul>
+                <li>00_hompage
+                    <ul>
+                        <li>
+                            <span class="status status--complete"></span>
+                            <a href="read.html" target="_blank">Read Page
+                                <span class="percent">100%</span>
+                            </a>
+                        </li>
+                        <li>
+                            <span class="status status--complete"></span>
+                            <a href="read-vertical.html" target="_blank">Read Page - vertical highlight image
+                                <span class="percent">100%</span>
+                            </a>
+                        </li>
+                        <li>
+                            <span class="status status--complete"></span>
+                            <a href="read-vdo.html" target="_blank">Read Page - video highlight
+                                <span class="percent">100%</span>
+                            </a>
+                        </li>
+                        <li>
+                            <span class="status status--complete"></span>
+                            <a href="read-noquote.html" target="_blank">Read Page - without quote box
+                                <span class="percent">100%</span>
+                            </a>
+                        </li>
+                        <li>
+                            <span class="status status--complete"></span>
+                            <a href="read-noimg.html" target="_blank">Read Page - without highlight image
+                                <span class="percent">100%</span>
+                            </a>
+                        </li>
+                        <li>
+                            <span class="status status--complete"></span>
+                            <a href="read-noinfo.html" target="_blank">Read Page - without info
+                                <span class="percent">100%</span>
+                            </a>
+                        </li>
+                        <li>
+                            <span class="status status--complete"></span>
+                            <a href="read-nogallery.html" target="_blank">Read Page - without gallery
+                                <span class="percent">100%</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </body>
+
+</html>
